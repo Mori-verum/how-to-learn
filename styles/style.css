@@ -232,8 +232,6 @@
 }
 
 .feynman_link {
-  position: relative;
-  z-index: 10;
   margin: 0;
   line-height: 51px;
   font-size: 36px;
@@ -241,6 +239,7 @@
   position: absolute;
   top: 50%;
   right: 48px;
+  z-index: 10;
 }
 
 .feynman__illustration {

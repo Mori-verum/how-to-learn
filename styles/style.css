@@ -1,9 +1,4 @@
-:root {
-  --accent-color--: #2f80ed;
-  --light-bg-color--: #f2f2f2;
-  --dark-bg-color--: #1f1f1f;
-  --text-color--: #000;
-}
+
 
 .page {
   min-width: 1100px;
@@ -21,26 +16,25 @@
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
-}
-
-.page_header {
-  background-color: var(--light-bg-color--);
+  background-color: #f2f2f2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.logo_plase_header {
+.header__logo {
+  width: 228px;
+  height: 32px;
+}
+
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
-}
-
-.title {
-  color: var(--text-color--);
-  line-height: 96px;
-  font-size: 102px;
-  font-weight: 600;
 }
 
 .header__title {
@@ -48,14 +42,12 @@
   z-index: 15;
   margin: 0 0 0 64px;
   max-width: 730px;
+  color:  #000;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: 600;
 }
 
-.subtitle {
-  color: var(--text-color--);
-  line-height: 25px;
-  font-size: 18px;
-  font-weight: normal;
-}
 
 .header__subtitle {
   margin: 0;
@@ -65,29 +57,24 @@
   left: 64px;
   bottom: 30px;
   max-width: 388px;
+  color:  #000;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
-.link {
+.header__link {
   text-decoration: none;
-  color: var(--accent-color--);
-}
-
-.main-illustration {
-  max-width: 765px;
-  max-height: 608px;
+  color: #2f80ed;
 }
 
 .header__main-illustration {
+  max-width: 765px;
+  max-height: 608px;
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 10;
-}
-
-.square-pic {
-  height: 568px;
-  width: 568px;
-  background-color: var(--accent-color--);
 }
 
 .header__square-pic {
@@ -95,6 +82,9 @@
   top: 64px;
   right: 0;
   z-index: 5;
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
 }
 
 /*Главные проблемы*/
@@ -115,7 +105,7 @@
 .two-columns__brief {
   margin: 0;
   max-width: 175px;
-  color: var(--accent-color--);
+  color: #2f80ed;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -130,7 +120,7 @@
 }
 
 .two-columns__paragraph {
-  margin-bottom: 30px;
+  margin: 0 0 30px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
@@ -204,7 +194,7 @@
 
 /*Метод Фейнмана*/
 .feynman {
-  background-color: var(--light-bg-color--);
+  background-color: #f2f2f2;
   position: relative;
   min-height: 890px;
 }
@@ -231,7 +221,10 @@
   text-align: center;
 }
 
-.feynman_link {
+
+.feynman__link {
+  text-decoration: none;
+  color: #2f80ed;
   margin: 0;
   line-height: 51px;
   font-size: 36px;
@@ -253,17 +246,16 @@
 
 /*Принцыпы обучения*/
 .kaufman {
-  background-color: var(--dark-bg-color--);
+  background-color: #1f1f1f;
   padding: 90px 0;
   position: relative;
   overflow: hidden;
-  z-index: -1;
-  /*В секции нет ссылок, которые могли бы перекрыться из-за позиционирования с отрицательным значением,
-  при появлении ссылок - изменить (для текста и kaufman__triangle)*/
 }
 
 .section-title_theme_dark {
   color: white;
+  position: relative;
+  z-index: 10;
 }
 
 .section-subtitle_theme_dark {
@@ -275,15 +267,18 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+  position: relative;
+  z-index: 10;
 }
 
 .kaufman__triangle {
+  background-image: url('../images/kaufman-triangle.svg');
   width: 877px;
   height: 877px;
   position: absolute;
   right: -210px;
   top: 0;
-  z-index: -1;
+  z-index: 5;
 }
 
 /*стили для footer*/
@@ -291,27 +286,30 @@
   padding: 60px 0 40px;
   box-sizing: border-box;
   min-height: 350px;
-  background-color: var(--dark-bg-color--);
+  background-color: #1f1f1f;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer__columns {
-  min-height: 250px;
   width: 90%;
   display: flex;
-  margin: 0 auto;
   justify-content: space-between;
+  margin: 0 auto;
+}
 
+.footer__column {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__column_content_copyright {
   flex-basis: 711px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
-.logo_place_footer {
+.footer__logo {
   width: 228px;
   height: 32px;
 }

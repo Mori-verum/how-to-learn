@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-.header__logo {
+.logo {
   width: 228px;
   height: 32px;
 }
@@ -307,11 +307,6 @@
 .footer__column_content_copyright {
   flex-basis: 711px;
   justify-content: space-between;
-}
-
-.footer__logo {
-  width: 228px;
-  height: 32px;
 }
 
 .footer__author {

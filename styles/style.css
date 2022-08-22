@@ -124,7 +124,7 @@
   margin-bottom: 0;
 }
 
-.two_columns__span-accent {
+.two-columns__span-accent {
   font-weight: 600;
 }
 
@@ -266,6 +266,7 @@
 }
 
 .kaufman__triangle {
+  background-size: contain;
   background-image: url('../images/kaufman-triangle.svg');
   width: 877px;
   height: 877px;
